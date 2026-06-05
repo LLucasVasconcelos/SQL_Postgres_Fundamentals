@@ -30,6 +30,11 @@ This repository contains a collection of PostgreSQL scripts designed to review a
 - **RIGHT JOIN**: Returning all records from the right table and matched records from the left.
 - **FULL JOIN**: Returning all records when there is a match in either the left or right table.
 
+### 6. Security & Permissions
+- **CREATE USER**: Creating new database users.
+- **GRANT**: Assigning specific permissions (CONNECT, USAGE, SELECT, etc.) to users.
+- **REVOKE**: Removing previously granted permissions.
+
 ## 📊 Database Schema
 
 The scripts use a simple `auth` schema with two related tables:
@@ -38,11 +43,22 @@ The scripts use a simple `auth` schema with two related tables:
 
 ## 📂 File Structure
 
-- `Script_CREATE_DROP_INSERT.sql`: Initial setup, table creation, and data seeding.
-- `Script_SELECT_DISTINCT_JOINS.sql`: Comprehensive query examples including filtering and all join types.
-- `.txt` versions of the scripts are also provided for quick reference.
+The project is organized by topic:
+
+### [01-basics/](./01-basics/)
+- `Script_CREATE_DROP_INSERT.sql`: Table creation, data insertion, and basic cleanup.
+- `Script_CREATE_DROP_INSERT.txt`: Text version for quick reference.
+
+### [02-security/](./02-security/)
+- `Script_GRANT_CREATE_REVOKE.sql`: User management and permission settings.
+- `Script_GRANT_CREATE_REVOKE.txt`: Text version for quick reference.
+
+### [03-advanced-queries/](./03-advanced-queries/)
+- `Script_SELECT_DISTINCT_JOINS.sql`: Advanced data retrieval using JOINs, DISTINCT, and pagination.
+- `Script_SELECT_DISTINCT_JOINS.txt`: Text version for quick reference.
 
 ## 🛠️ How to Use
 1. Ensure you have a PostgreSQL instance running.
-2. Execute the scripts in `Script_CREATE_DROP_INSERT.sql` first to set up the tables and data.
-3. Run the queries in `Script_SELECT_DISTINCT_JOINS.sql` to explore different data retrieval techniques.
+2. Execute the scripts in `01-basics/` first to set up the tables and data.
+3. (Optional) Run `02-security/` to practice user and permission management.
+4. Run the queries in `03-advanced-queries/` to explore different data retrieval techniques.
